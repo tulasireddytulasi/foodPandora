@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Zomato</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="popular_cuisines">Popular Cuisines</string>
+    <string name="banner_text">Eat healthy and live health. Boost your immune system with healthy recipes</string>
+    <string name="offer_text">EVERYTHING \nAT <font color="#000"><b>₹129</b></font> only </string>
+    <string name="indian">Indian</string>
+    <string name="mexican">Mexican</string>
+    <string name="chinese">Chinese</string>
+    <string name="french">French</string>
+</resources>

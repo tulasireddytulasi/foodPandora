@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#7D2B7D</color>
+<color name="colorPrimaryDark">#EDE6E6</color>
+<color name="colorAccent">#03DAC5</color>
+<color name="white">#FFFFFF</color>
+<color name="lightGreen">#E5FEF8</color>
+<color name="darkGreen">#64BCA3</color>
+<color name="pink">#7D2B7D</color>
+<color name="lightpink">#FBF6FC</color>
+<color name="line">#FAF1FA</color>
+<color name="dash">#DCD5D5</color>
+<color name="black">#000</color>
+<color name="lightblack">#AFA8A8</color>
+<color name="signal_white">#FFFFFF</color>
+<color name="soft_peach">#F3ECEC</color>
+<color name="dark_grey">#848484</color>
+<color name="light_black">#807373</color>
+<color name="iron_grey">#5A5A5A</color>
+<color name="traffic_grey">#555555</color>
+<color name="grey_brown">#424242</color>
+<color name="transparent">#00000000</color>
+
+</resources>
