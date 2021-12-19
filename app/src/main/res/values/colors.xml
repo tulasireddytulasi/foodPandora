@@ -21,4 +21,6 @@
 <color name="grey_brown">#424242</color>
 <color name="transparent">#00000000</color>
 
+<color name="shimmer_color">#BFBDBD</color>
+
 </resources>

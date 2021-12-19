@@ -10,4 +10,11 @@
     <string name="mexican">Mexican</string>
     <string name="chinese">Chinese</string>
     <string name="french">French</string>
+    <string name="chicken_dum_biryani">Chicken Dum Biryani</string>
+    <string name="no_image">No Image</string>
+    <string name="burger_king">Burger King</string>
+    <string name="inside">inside</string>
+    <string name="_60_off">60% OFF</string>
+    <string name="great_offers_on_nyummy_dishes">Great offers on \nyummy dishes</string>
+    <string name="_200_recipes">200+ recipes</string>
 </resources>
