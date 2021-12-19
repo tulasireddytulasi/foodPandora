@@ -16,24 +16,24 @@ import com.example.zomato.modelclass.BiryaniDataModel;
 
 import java.util.List;
 
-public class BiryaniAdapter extends RecyclerView.Adapter<BiryaniAdapter.BiryaniAdapterViewHolder> {
+public class BurgerAdapter extends RecyclerView.Adapter<BurgerAdapter.BurgerAdapterViewHolder> {
 
     private Context context;
     private List<BiryaniDataModel> biryaniDataModelList;
-    public BiryaniAdapter(Context context, List<BiryaniDataModel> biryaniDataModelList) {
+    public BurgerAdapter(Context context, List<BiryaniDataModel> biryaniDataModelList) {
         this.context = context;
         this.biryaniDataModelList = biryaniDataModelList;
     }
 
     @NonNull
     @Override
-    public BiryaniAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BurgerAdapterViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.biryanilist_layout, parent, false);
-        return new BiryaniAdapterViewHolder(view);
+        return new BurgerAdapterViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull BiryaniAdapter.BiryaniAdapterViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BurgerAdapterViewHolder holder, int position) {
 
         List<BiryaniDataModel> biryaniDataModelList5 = biryaniDataModelList;
 
@@ -42,7 +42,7 @@ public class BiryaniAdapter extends RecyclerView.Adapter<BiryaniAdapter.BiryaniA
                 .placeholder(R.drawable.poster1)
                 .centerCrop()
                 .into(holder.imageView);
-        holder.name.setText(R.string.dum_biryani);
+        holder.name.setText(R.string.chicken_burger);
     }
 
     @Override
@@ -50,11 +50,11 @@ public class BiryaniAdapter extends RecyclerView.Adapter<BiryaniAdapter.BiryaniA
         return biryaniDataModelList.size();
     }
 
-    public class BiryaniAdapterViewHolder extends RecyclerView.ViewHolder{
+    static public class BurgerAdapterViewHolder extends RecyclerView.ViewHolder{
 
         ImageView imageView;
         TextView name, department ;
-        public BiryaniAdapterViewHolder(@NonNull View itemView) {
+        public BurgerAdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.biryanicardimg);
             name = itemView.findViewById(R.id.item_name);

@@ -16,6 +16,11 @@ public interface Api {
             @Query("category") String category
     );
 
+    @GET("getimages.php")
+    Call<List<BiryaniDataModel>> getBurgerList(
+            @Query("category") String category
+    );
+
 }
 
 

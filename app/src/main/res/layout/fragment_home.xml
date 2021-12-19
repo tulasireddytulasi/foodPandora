@@ -9,9 +9,10 @@
     tools:context=".ui.home.HomeFragment">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/banner_card"
@@ -47,7 +48,6 @@
             android:id="@+id/banners"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/banner_card"
             android:layout_marginTop="10dp"
             android:baselineAligned="false"
             android:orientation="horizontal"
@@ -160,7 +160,6 @@
             android:id="@+id/popular_cuisines"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/banners"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"
             android:text="@string/popular_cuisines"
@@ -171,8 +170,7 @@
             android:id="@+id/gridlayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/popular_cuisines"
-            android:layout_centerHorizontal="true"
+            android:layout_marginStart="16dp"
             android:columnCount="2"
             android:orientation="vertical"
             android:rowCount="2">
@@ -418,10 +416,9 @@
         </GridLayout>
 
         <TextView
-            android:id="@+id/healthy_snacks"
+            android:id="@+id/chicken_dum_biryani"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/gridlayout"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"
             android:text="@string/chicken_dum_biryani"
@@ -432,7 +429,6 @@
             android:id="@+id/linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/healthy_snacks"
             android:orientation="vertical">
 
             <com.facebook.shimmer.ShimmerFrameLayout
@@ -461,10 +457,11 @@
             </com.facebook.shimmer.ShimmerFrameLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerview"
+                android:id="@+id/biryani_recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:clipToPadding="false"
                 android:visibility="gone">
 
@@ -472,7 +469,67 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/burgers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:text="@string/burgers"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
 
-    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/biryanilist_shimmer_layout" />
+
+                <include layout="@layout/biryanilist_shimmer_layout" />
+
+                <include layout="@layout/biryanilist_shimmer_layout" />
+
+                <include layout="@layout/biryanilist_shimmer_layout" />
+
+                <include layout="@layout/biryanilist_shimmer_layout" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/burger_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:visibility="gone">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/text57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/banner_text"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="60dp" />
+
+    </LinearLayout>
 
 </ScrollView>
