@@ -18,8 +18,8 @@ import java.util.List;
 
 public class BurgerAdapter extends RecyclerView.Adapter<BurgerAdapter.BurgerAdapterViewHolder> {
 
-    private Context context;
-    private List<BiryaniDataModel> biryaniDataModelList;
+    private final Context context;
+    private final List<BiryaniDataModel> biryaniDataModelList;
     public BurgerAdapter(Context context, List<BiryaniDataModel> biryaniDataModelList) {
         this.context = context;
         this.biryaniDataModelList = biryaniDataModelList;
@@ -35,10 +35,8 @@ public class BurgerAdapter extends RecyclerView.Adapter<BurgerAdapter.BurgerAdap
     @Override
     public void onBindViewHolder(@NonNull BurgerAdapterViewHolder holder, int position) {
 
-        List<BiryaniDataModel> biryaniDataModelList5 = biryaniDataModelList;
-
         Glide.with(context)
-                .load("https://marvelwallpapers.000webhostapp.com/"+biryaniDataModelList5.get(position).getName())
+                .load("https://marvelwallpapers.000webhostapp.com/"+ biryaniDataModelList.get(position).getName())
                 .placeholder(R.drawable.poster1)
                 .centerCrop()
                 .into(holder.imageView);

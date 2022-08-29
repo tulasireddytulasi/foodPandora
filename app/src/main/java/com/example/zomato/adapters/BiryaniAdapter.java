@@ -18,8 +18,8 @@ import java.util.List;
 
 public class BiryaniAdapter extends RecyclerView.Adapter<BiryaniAdapter.BiryaniAdapterViewHolder> {
 
-    private Context context;
-    private List<BiryaniDataModel> biryaniDataModelList;
+    private final Context context;
+    private final List<BiryaniDataModel> biryaniDataModelList;
     public BiryaniAdapter(Context context, List<BiryaniDataModel> biryaniDataModelList) {
         this.context = context;
         this.biryaniDataModelList = biryaniDataModelList;
@@ -35,10 +35,8 @@ public class BiryaniAdapter extends RecyclerView.Adapter<BiryaniAdapter.BiryaniA
     @Override
     public void onBindViewHolder(@NonNull BiryaniAdapter.BiryaniAdapterViewHolder holder, int position) {
 
-        List<BiryaniDataModel> biryaniDataModelList5 = biryaniDataModelList;
-
         Glide.with(context)
-                .load("https://marvelwallpapers.000webhostapp.com/"+biryaniDataModelList5.get(position).getName())
+                .load("https://marvelwallpapers.000webhostapp.com/"+ biryaniDataModelList.get(position).getName())
                 .placeholder(R.drawable.poster1)
                 .centerCrop()
                 .into(holder.imageView);
@@ -50,7 +48,7 @@ public class BiryaniAdapter extends RecyclerView.Adapter<BiryaniAdapter.BiryaniA
         return biryaniDataModelList.size();
     }
 
-    public class BiryaniAdapterViewHolder extends RecyclerView.ViewHolder{
+    public static class BiryaniAdapterViewHolder extends RecyclerView.ViewHolder{
 
         ImageView imageView;
         TextView name, department ;
