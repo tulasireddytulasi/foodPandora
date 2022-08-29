@@ -18,31 +18,22 @@ import com.example.zomato.adapters.BurgerAdapter;
 import com.example.zomato.modelclass.BiryaniDataModel;
 import com.facebook.shimmer.ShimmerFrameLayout;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-    private List<BiryaniDataModel> dataArrayList;
-    private List<BiryaniDataModel> burgerDatamodel;
     private RecyclerView recyclerView;
     private RecyclerView burgerRecyclerView;
     private LinearLayoutManager linearLayoutManager;
     private LinearLayoutManager burgerLinearLayoutManager;
-    private BiryaniAdapter biryaniAdapter;
-    private BurgerAdapter burgerAdapter;
     private ShimmerFrameLayout shimmerFrameLayout, burgerShimmerFrameLayout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         setRetainInstance(true);
-        homeViewModel =
-                new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
+        HomeViewModel homeViewModel = new ViewModelProvider(requireActivity()).get(HomeViewModel.class);
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        dataArrayList = new ArrayList<>();
-        burgerDatamodel = new ArrayList<>();
         recyclerView = view.findViewById(R.id.biryani_recyclerview);
         burgerRecyclerView = view.findViewById(R.id.burger_recyclerview);
         shimmerFrameLayout = view.findViewById(R.id.shimmer);
@@ -65,7 +56,7 @@ public class HomeFragment extends Fragment {
             shimmerFrameLayout.stopShimmer();
             shimmerFrameLayout.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);
-            biryaniAdapter = new BiryaniAdapter(requireActivity(), biryaniDataArrayList);
+            BiryaniAdapter biryaniAdapter = new BiryaniAdapter(requireActivity(), biryaniDataArrayList);
             recyclerView.setAdapter(biryaniAdapter);
         }
     };
@@ -77,7 +68,7 @@ public class HomeFragment extends Fragment {
             burgerShimmerFrameLayout.stopShimmer();
             burgerShimmerFrameLayout.setVisibility(View.GONE);
             burgerRecyclerView.setVisibility(View.VISIBLE);
-            burgerAdapter = new BurgerAdapter(requireActivity(), burgersDataArrayList);
+            BurgerAdapter burgerAdapter = new BurgerAdapter(requireActivity(), burgersDataArrayList);
             burgerRecyclerView.setAdapter(burgerAdapter);
         }
     };
