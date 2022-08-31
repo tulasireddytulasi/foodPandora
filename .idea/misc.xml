@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/drawable-xxxhdpi/fff.xml" value="0.20833333333333334" />
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/drawable/cuisines_card_shape.xml" value="0.20833333333333334" />
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/layout/activity_main.xml" value="0.1921875" />
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/layout/biryanilist_layout.xml" value="0.1921875" />
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/layout/biryanilist_shimmer_layout.xml" value="0.1921875" />
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/layout/fragment_dashboard.xml" value="0.1921875" />
         <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/layout/fragment_home.xml" value="0.12685185185185185" />
+        <entry key="..\:/Android studio/Projects_X/foodPandora/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1921875" />
       </map>
     </option>
   </component>
